@@ -20,8 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         m <- x$getInverse()
         if(!is.null(inv)) {                         #return the value of inverse if available
-                message("getting cached matrix")
-                return(inv)
+                message("getting cached matrix")    #informs user that the program will use the saved inverse
+                return(inv)                        #prints the available inverse
         }
         data <- x$get()                           #calculate the value of inverse(where is null)
         inv<- solve(data, ...)
